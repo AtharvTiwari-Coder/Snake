@@ -1,96 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snake Play Menu</title>
-  <link rel="stylesheet" href="SnakeMenuCSS.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game Menu</title>
+  <link rel="stylesheet" href="SnakeMenuCSS.css" />
+  <script defer src="SnakeMenuJS.js"></script>
 </head>
 <body>
 
-  <!-- Header Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="brand">🐍 Snake Play Menu</h1>
-      <nav class="nav">
-        <button id="btnPlay" class="nav-btn">Play</button>
-        <button id="btnShop" class="nav-btn">Shop</button>
-        <button id="btnSnakes" class="nav-btn">Snakes</button>
-        <button id="btnSettings" class="nav-btn">Settings</button>
-      </nav>
-    </div>
+  <!-- Loading Screen -->
+  <div id="loadingScreen">
+    <img src="https://raw.githubusercontent.com/AtharvTiwari-Coder/Snake/3d40fd175a722eaf6d3af02333a383fcef19bea9/Snake-LOGO.png" 
+         alt="Snake Game Logo" class="loading-logo" />
+  </div>
+
+  <!-- Main Menu -->
+  <header class="menu-header">
+    <h1>Snake Game</h1>
+    <nav class="menu-nav">
+      <button id="playBtn">Play</button>
+      <button id="shopBtn">Shop</button>
+      <button id="snakesBtn">Snakes</button>
+      <button id="settingsBtn">Settings</button>
+    </nav>
   </header>
 
-  <!-- Main Content -->
-  <main class="container main-grid">
-
-    <!-- Levels Section -->
-    <section id="levelsSection" class="card hidden">
-      <h2>Levels</h2>
-      <p>Progress through 1–100 levels. Every 10th level is special and harder.</p>
-      <div id="levelsGrid">
-        <!-- Levels will be generated dynamically with JavaScript -->
-      </div>
+  <!-- Sections -->
+  <main class="menu-sections">
+    <section id="playSection" class="hidden">
+      <h2>Play Snake</h2>
+      <p>Start the game and slither to victory!</p>
     </section>
 
-    <!-- Settings Section -->
-    <section id="settingsSection" class="card hidden">
-      <h2>Settings</h2>
-      <div class="settings-group">
-        <label for="difficultySelect">Difficulty:</label>
-        <select id="difficultySelect">
-          <option value="peaceful">Peaceful</option>
-          <option value="easy">Easy</option>
-          <option value="normal">Normal</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-          <option value="extreme">Extreme</option>
-        </select>
-      </div>
-
-      <div class="settings-group">
-        <label for="audioRange">Audio:</label>
-        <input type="range" id="audioRange" min="0" max="100" value="50">
-      </div>
-
-      <div class="settings-group">
-        <label for="sensitivityRange">Sensitivity:</label>
-        <input type="range" id="sensitivityRange" min="1" max="100" value="50">
-      </div>
-
-      <div class="settings-group">
-        <label for="fovRange">FOV:</label>
-        <input type="range" id="fovRange" min="60" max="120" value="90">
-      </div>
-    </section>
-
-    <!-- Shop Section -->
-    <section id="shopSection" class="card hidden">
+    <section id="shopSection" class="hidden">
       <h2>Shop</h2>
-      <ul class="shop-list">
-        <li>Magnet — attracts fruits for a limited time</li>
-        <li>Speed Boost — temporary increase in speed</li>
-        <li>2X Coin Multiplier — doubles coin rewards for a period</li>
-        <li>Snake Power — survive one or two hits against walls</li>
-      </ul>
+      <p>Buy skins, upgrades, and more.</p>
     </section>
 
-    <!-- Snakes Section -->
-    <section id="snakesSection" class="card hidden">
-      <h2>Choose Your Snake</h2>
-      <p>Select different snake skins and styles to play with.</p>
-      <div id="snakeOptions">
-        <!-- Snake skins will be added here -->
-      </div>
+    <section id="snakesSection" class="hidden">
+      <h2>Snakes</h2>
+      <p>Choose your snake style and color.</p>
     </section>
 
+    <section id="settingsSection" class="hidden">
+      <h2>Settings</h2>
+      <p>Adjust game preferences and controls.</p>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2026 Snake Game by ATHARV</p>
+    <p>© 2026 Snake Game by ATHARV | Logo hosted on GitHub</p>
   </footer>
 
-  <script src="SnakeMenuJS.js"></script>
 </body>
 </html>
