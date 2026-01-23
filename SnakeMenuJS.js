@@ -11,7 +11,9 @@ window.addEventListener("load", () => {
 
     // After fade-out, remove loading screen completely
     setTimeout(() => {
-      loadingScreen.style.display = "none";
+      if (loadingScreen) {
+        loadingScreen.remove(); // ensures menu is accessible
+      }
     }, 1000);
   }, 2000);
 });
