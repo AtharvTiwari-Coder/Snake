@@ -1,47 +1,68 @@
-/* Global body styling with PeakPX background */
+/* Global body styling with GitHub raw background */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url("https://raw.githubusercontent.com/AtharvTiwari-Coder/Snake/main/Snake-Menu-Background.jpg")
-              no-repeat center center;
+              no-repeat center center fixed;
   background-size: cover;
   color: #f5f5f5;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Dark overlay to make text pop */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
 }
 
 /* Loading screen */
 #loadingScreen {
-  position: absolute;   /* corrected: no longer fixed */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000; /* dark background */
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  opacity: 1; /* start visible */
+  opacity: 1;
 }
 
 .loading-logo {
-  width: 40%;   /* balanced size */
+  width: 40%;
   max-width: 400px;
+  animation: pulseGlow 2s infinite;
+}
+
+/* Neon pulse animation */
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 5px #00ff66); }
+  50% { filter: drop-shadow(0 0 20px #00ff66); }
+  100% { filter: drop-shadow(0 0 5px #00ff66); }
 }
 
 /* Header and navigation */
 .menu-header {
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #00ff66;
+  box-shadow: 0 0 15px #00ff66;
 }
 
 .menu-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
-  color: #00ff66; /* neon green */
+  color: #00ff66;
+  text-shadow: 0 0 15px #00ff66;
 }
 
+/* Navigation buttons */
 .menu-nav {
   margin-top: 15px;
 }
@@ -49,19 +70,21 @@ body {
 .menu-nav button {
   background: #00ff66;
   border: none;
-  padding: 12px 24px;
-  margin: 8px;
-  font-size: 1rem;
+  padding: 14px 28px;
+  margin: 10px;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #000;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 0 10px #00ff66;
   transition: all 0.3s ease;
 }
 
 .menu-nav button:hover {
   background: #00cc55;
-  transform: scale(1.05);
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #00ff66;
 }
 
 /* Sections */
@@ -71,15 +94,22 @@ body {
 }
 
 .menu-sections section {
-  background: rgba(0, 0, 0, 0.7);
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 0 15px #00ff66;
+  transition: transform 0.3s ease;
+}
+
+.menu-sections section:hover {
+  transform: scale(1.05);
 }
 
 .menu-sections h2 {
   color: #00ff66;
+  text-shadow: 0 0 10px #00ff66;
 }
 
 .hidden {
@@ -90,7 +120,9 @@ body {
 .site-footer {
   text-align: center;
   padding: 15px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   font-size: 0.9rem;
   color: #ccc;
+  border-top: 2px solid #00ff66;
+  box-shadow: 0 0 10px #00ff66;
 }
