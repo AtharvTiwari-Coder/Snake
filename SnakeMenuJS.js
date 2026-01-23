@@ -1,17 +1,19 @@
 // SnakeMenuJS.js
 
-// Fade out loading screen once page fully loads
+// Handle loading screen fade-out
 window.addEventListener("load", () => {
   const loadingScreen = document.getElementById("loadingScreen");
-  loadingScreen.style.opacity = "1";
 
+  // Keep logo visible for 2 seconds
   setTimeout(() => {
     loadingScreen.style.transition = "opacity 1s ease";
     loadingScreen.style.opacity = "0";
+
+    // After fade-out, remove loading screen completely
     setTimeout(() => {
       loadingScreen.style.display = "none";
     }, 1000);
-  }, 2000); // logo stays visible for 2 seconds
+  }, 2000);
 });
 
 // Menu button logic
