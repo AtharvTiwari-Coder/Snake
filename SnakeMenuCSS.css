@@ -76,6 +76,11 @@ body {
   border-radius: 8px;
   max-width: 600px;
 }
+.loading-logo {
+  width: 40%;
+  max-width: 400px;
+}
+
 
 .menu-sections h2 {
   color: #00ff66;
