@@ -3,56 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snake Game Menu</title>
+  <title>Snake Game Settings</title>
   <link rel="stylesheet" href="SnakeMenuCSS.css" />
   <script defer src="SnakeMenuJS.js"></script>
 </head>
-<body>
+<body style="background-image: url('https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Background.png'); background-size: cover;">
 
-  <!-- Loading Screen -->
-  <div id="loadingScreen">
-    <img src="https://raw.githubusercontent.com/AtharvTiwari-Coder/Snake/3d40fd175a722eaf6d3af02333a383fcef19bea9/Snake-LOGO.png" 
-         alt="Snake Game Logo" class="loading-logo" />
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-LOGO.png" alt="Snake Logo" class="logo" />
   </div>
 
-  <!-- Main Menu -->
+  <!-- Header -->
   <header class="menu-header">
-    <h1>Snake Game</h1>
-    <nav class="menu-nav">
-      <button id="playBtn">Play</button>
-      <button id="shopBtn">Shop</button>
-      <button id="snakesBtn">Snakes</button>
-      <button id="settingsBtn">Settings</button>
-    </nav>
+    <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Back_To_Menu-Arrow.png" class="back-arrow" alt="Back" />
+    <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Settings_icon.png" class="settings-icon" alt="Settings" />
   </header>
 
-  <!-- Sections -->
-  <main class="menu-sections">
-    <section id="playSection" class="hidden">
-      <h2>Play Snake</h2>
-      <p>Start the game and slither to victory!</p>
-    </section>
+  <!-- Settings Panel -->
+  <main class="settings-panel">
+    <h1>Settings</h1>
 
-    <section id="shopSection" class="hidden">
-      <h2>Shop</h2>
-      <p>Buy skins, upgrades, and more.</p>
-    </section>
+    <!-- Name Input -->
+    <div class="setting-group">
+      <input type="text" placeholder="Enter Name" class="text-input" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Apply_Button.png" class="apply-button" alt="Apply" />
+    </div>
 
-    <section id="snakesSection" class="hidden">
-      <h2>Snakes</h2>
-      <p>Choose your snake style and color.</p>
-    </section>
+    <!-- Game Quality -->
+    <div class="setting-group">
+      <label>Game Quality:</label>
+      <select class="quality-selector">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+    </div>
 
-    <section id="settingsSection" class="hidden">
-      <h2>Settings</h2>
-      <p>Adjust game preferences and controls.</p>
-    </section>
+    <!-- Audio -->
+    <div class="setting-group">
+      <label>Audio:</label>
+      <input type="range" class="slider" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Bar_Knob.png" class="slider-knob" alt="Knob" />
+      <input type="number" class="integer-input" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Bell_Icon.png" class="bell-icon" alt="Bell" />
+    </div>
+
+    <!-- Sensitivity -->
+    <div class="setting-group">
+      <label>Sensitivity:</label>
+      <input type="range" class="slider" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Bar_Knob.png" class="slider-knob" alt="Knob" />
+      <input type="number" class="integer-input" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Reset_Button.png" class="reset-button" alt="Reset" />
+    </div>
+
+    <!-- FOV -->
+    <div class="setting-group">
+      <label>Field of View:</label>
+      <input type="range" class="slider" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Bar_Knob.png" class="slider-knob" alt="Knob" />
+      <input type="number" class="integer-input" />
+      <img src="https://github.com/AtharvTiwari-Coder/Snake/blob/Backgrounds-%26-Images/Snake-Menu-Settings-Reset_Button.png" class="reset-button" alt="Reset" />
+    </div>
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2026 Snake Game by ATHARV | Logo hosted on GitHub</p>
-  </footer>
-
 </body>
 </html>
