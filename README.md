@@ -1,2 +1,2 @@
 # Snake
-This is just a Snake game.
+This is just a game
